@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/listaMunicipios">
+    <fragment
+        android:id="@+id/listaMunicipios"
+        android:name="br.com.pucpr.pucprmunicipio.ui.fragment.ListaMunicipiosFragment"
+        android:label="Lista de municipios"
+        tools:layout="@layout/lista_municipio">
+        <action
+            android:id="@+id/acao_listaMunicipios_para_detalhesMunicipio"
+            app:destination="@id/detalhesMunicipio"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim" />
+    </fragment>
+    <fragment
+        android:id="@+id/detalhesMunicipio"
+        android:name="br.com.pucpr.pucprmunicipio.ui.fragment.DetalhesMunicipioFragment"
+        android:label="Detalhes do municipio"
+        tools:layout="@layout/detalhes_municipio">
+        <argument
+            android:name="municipioId"
+            app:argType="long" />
+    </fragment>
+    <action
+        android:id="@+id/acao_global_login"
+        app:destination="@id/login_graph"
+        app:enterAnim="@anim/nav_default_enter_anim"
+        app:exitAnim="@anim/nav_default_exit_anim"
+        app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+        app:popExitAnim="@anim/nav_default_pop_exit_anim"
+        app:popUpTo="@+id/listaMunicipios"
+        app:popUpToInclusive="true" />
+    <navigation
+        android:id="@+id/login_graph"
+        android:label="Fluxo login"
+        app:startDestination="@id/login">
+        <fragment
+            android:id="@+id/login"
+            android:name="br.com.pucpr.pucprmunicipio.ui.fragment.LoginFragment"
+            android:label="Login"
+            tools:layout="@layout/login">
+            <action
+                android:id="@+id/acao_login_para_listaMunicipios"
+                app:destination="@id/listaMunicipios"
+                app:enterAnim="@anim/nav_default_enter_anim"
+                app:exitAnim="@anim/nav_default_exit_anim"
+                app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+                app:popExitAnim="@anim/nav_default_pop_exit_anim"
+                app:popUpTo="@+id/login"
+                app:popUpToInclusive="true" />
+            <action
+                android:id="@+id/acao_login_para_cadastroUsuario"
+                app:destination="@id/cadastroUsuario"
+                app:enterAnim="@anim/nav_default_enter_anim"
+                app:exitAnim="@anim/nav_default_exit_anim"
+                app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+                app:popExitAnim="@anim/nav_default_pop_exit_anim" />
+        </fragment>
+        <fragment
+            android:id="@+id/cadastroUsuario"
+            android:name="br.com.pucpr.pucprmunicipio.ui.fragment.CadastroUsuarioFragment"
+            android:label="Cadastro de usuário"
+            tools:layout="@layout/cadastro_usuario" />
+    </navigation>
+    <fragment
+        android:id="@+id/minhaConta"
+        android:name="br.com.pucpr.pucprmunicipio.ui.fragment.MInhaContaFragment"
+        android:label="Minha conta"
+        tools:layout="@layout/minha_conta" />
+</navigation>

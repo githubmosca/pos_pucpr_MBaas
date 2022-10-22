@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/listaMunicipios"
+        android:icon="@drawable/ic_action_municipio"
+        android:title="Municipios" />
+    <item
+        android:id="@+id/MinhaConta"
+        android:icon="@drawable/ic_action_minha_conta"
+        android:title="Minha Conta" />
+</menu>

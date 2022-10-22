@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "979804521902",
+    "project_id": "pucpr-municipio",
+    "storage_bucket": "pucpr-municipio.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:979804521902:android:12bbadf2b3d8ddd22ff43f",
+        "android_client_info": {
+          "package_name": "br.com.pucpr.pucprmunicipio"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "979804521902-m8scqu80uua0h1pklv2228h5j79cb9ti.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA7_T-tJUiyZ-1gUBl6vE-tUoSvQn66Flg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "979804521902-m8scqu80uua0h1pklv2228h5j79cb9ti.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
